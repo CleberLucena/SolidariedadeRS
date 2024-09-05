@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+    <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagem_solidariedade"
+            android:alpha="1" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btnPostosColeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Endereços dos Postos de Doação"
+                android:textColor="#000000"
+        android:textSize="18sp"
+                android:background="#FFFFFF"
+        android:layout_marginTop="20dp" />
+
+        <Button
+                android:id="@+id/btnNumerosEmergencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Números de Emergência"
+                android:textColor="#000000"
+        android:textSize="18sp"
+                android:background="#FFFFFF"
+        android:layout_marginTop="20dp" />
+
+        <Button
+                android:id="@+id/btnMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Localização dos Postos de doação (Porto Alegre)"
+                android:textColor="#000000"
+        android:textSize="18sp"
+                android:background="#FFFFFF"
+        android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+    <!-- Botão para abrir a tela de mensagem de solidariedade -->
+    <ImageButton
+            android:id="@+id/btnSolidariedade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_edit"
+            android:contentDescription="Escrever mensagem de solidariedade" />
+
+</FrameLayout>
+
