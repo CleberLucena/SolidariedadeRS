@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "613449469034",
+    "project_id": "databaseaplicativo",
+    "storage_bucket": "databaseaplicativo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613449469034:android:bce5a20b38339a59a5ce13",
+        "android_client_info": {
+          "package_name": "com.example.solidariedaders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXwwkCAwr03rGhC1D6WM9x4ALo-MGJqao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
