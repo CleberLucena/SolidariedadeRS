@@ -1,0 +1,17 @@
+{
+  "name": "solidariedaders",
+  "version": "1.0.0",
+  "description": "SolidariedadeRs é um projeto voltado para ajudar pessoas afetadas pelas enchentes, fornecendo informações sobre postos de doações, números de emergência e um mapa com a localização desses postos. Além disso, permite que os usuários deixem mensagens de solidariedade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
+    "express": "^4.21.2",
+    "firebase": "^11.3.1"
+  }
+}
