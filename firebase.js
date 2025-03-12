@@ -1,4 +1,4 @@
-
+// firebase.js (versão aprimorada)
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, addDoc, getDocs } = require('firebase/firestore');
 
@@ -17,41 +17,48 @@ const db = getFirestore(app);
 
 async function addPosto(posto) {
     const docRef = await addDoc(collection(db, 'postos_doacao'), posto);
-    console.log('Posto adicionado com ID: ', docRef.id);
+    console.log('Posto adicionado com ID:', docRef.id);
+    return docRef;
 }
 
 async function getPostos() {
     const querySnapshot = await getDocs(collection(db, 'postos_doacao'));
+    const postos = [];
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, ' => ', doc.data());
+        postos.push({ id: doc.id, ...doc.data() });
     });
+    return postos;
 }
 
 async function addNumeroEmergencia(numero) {
     const docRef = await addDoc(collection(db, 'numeros_emergencia'), numero);
-    console.log('Número de emergência adicionado com ID: ', docRef.id);
+    console.log('Número de emergência adicionado com ID:', docRef.id);
+    return docRef;
 }
 
 async function getNumerosEmergencia() {
     const querySnapshot = await getDocs(collection(db, 'numeros_emergencia'));
+    const numeros = [];
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, ' => ', doc.data());
+        numeros.push({ id: doc.id, ...doc.data() });
     });
+    return numeros;
 }
 
 async function addMensagemSolidariedade(mensagem) {
     const docRef = await addDoc(collection(db, 'mensagens_solidariedade'), mensagem);
-    console.log('Mensagem de solidariedade adicionada com ID: ', docRef.id);
+    console.log('Mensagem de solidariedade adicionada com ID:', docRef.id);
+    return docRef;
 }
 
 async function getMensagensSolidariedade() {
     const querySnapshot = await getDocs(collection(db, 'mensagens_solidariedade'));
+    const mensagens = [];
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, ' => ', doc.data());
+        mensagens.push({ id: doc.id, ...doc.data() });
     });
+    return mensagens;
 }
-
-
 module.exports = {
     db,
     addPosto,
